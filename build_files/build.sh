@@ -14,7 +14,7 @@ dnf5 install -y tmux
 
 dnf5  install -y mc tigervnc tigervnc-server \
                 terminator autossh fluxbox xterm \
-                rofi krusader autossh btop fd fzf
+                rofi autossh btop fd fzf
 
 # Use a COPR Example:
 #
