@@ -15,9 +15,11 @@ set -ouex pipefail
 
 dnf5  install -y mc tigervnc tigervnc-server \
                 autossh fluxbox xterm \
-                rofi fd fzf zoxide
+                rofi fd fzf zoxide konsole \
+		krusader
 
-#dnf5 remove -y steam firewalld lutris bazaar
+dnf5 remove -y steam firewalld lutris bazaar \
+	steamdeck-kde-presets-desktop steam-devices
 
 
 #dnf5 install -y  plasma-workspace-x11
