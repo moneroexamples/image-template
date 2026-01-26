@@ -16,6 +16,9 @@ dnf5  install -y mc tigervnc tigervnc-server \
                 autossh fluxbox xterm \
                 rofi fd fzf
 
+dnf5 remove -y steam firewalld lutris bazaar
+
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
