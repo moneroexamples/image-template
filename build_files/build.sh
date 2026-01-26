@@ -26,17 +26,10 @@ dnf5  install -y mc tigervnc tigervnc-server \
 #dnf5 install -y kernel-devel kernel-headers gcc make elfutils-libelf-devel
 
 
-cat > /etc/yum.repos.d/virtualbox.repo <<EOF
-[virtualbox]
-name=Oracle VirtualBox
-baseurl=http://download.virtualbox.org/virtualbox/rpm/fedora/\$releasever/x86_64/ 
-enabled=1
-gpgcheck=1
-repo_gpgcheck=1
-gpgkey=https://www.virtualbox.org/download/oracle_vbox_2016.asc
-EOF
-
-rpm --import https://www.virtualbox.org/download/oracle_vbox_2016.asc
+wget http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo
+mv virtualbox.repo /etc/yum.repos.d/virtualbox.repo
+dnf5 install -y VirtualBox-7.2
+sudo usermod -a -G vboxusers mwo
 
 dnf5 install -y VirtualBox
 
