@@ -11,15 +11,14 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 #dnf5 install -y tmux 
-dnf5 update -y 
+#dnf5 update -y 
 
 dnf5  install -y mc tigervnc tigervnc-server \
                 autossh fluxbox xterm \
-                rofi fd fzf
+                rofi fd fzf zoxide
 
-dnf5 remove -y steam firewalld lutris bazaar
+#dnf5 remove -y steam firewalld lutris bazaar
 
-dnf5 install -y @xfce-desktop-environment
 
 #dnf5 install -y  plasma-workspace-x11
 
