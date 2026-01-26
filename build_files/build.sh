@@ -20,7 +20,7 @@ dnf5 remove -y steam firewalld lutris bazaar \
 dnf5  install -y mc tigervnc tigervnc-server \
                 autossh fluxbox xterm \
                 rofi fd fzf zoxide konsole \
-		krusader
+		krusader xsane
 
 # for virtualbox
 #dnf5 install -y kernel-devel kernel-headers gcc make elfutils-libelf-devel
