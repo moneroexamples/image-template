@@ -19,9 +19,9 @@ dnf5  install -y mc tigervnc tigervnc-server \
 
 dnf5 remove -y steam firewalld lutris bazaar
 
-#dnf5 install -y @xfce-desktop-environment
+dnf5 install -y @xfce-desktop-environment
 
-dnf5 install -y  plasma-workspace-x11
+#dnf5 install -y  plasma-workspace-x11
 
 # Use a COPR Example:
 #
