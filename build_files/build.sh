@@ -23,14 +23,14 @@ dnf5  install -y mc tigervnc tigervnc-server \
 		krusader
 
 # for virtualbox
-dnf5 install -y kernel-devel kernel-headers gcc make elfutils-libelf-devel
+#dnf5 install -y kernel-devel kernel-headers gcc make elfutils-libelf-devel
 
 FEDORA_VERSION=$(rpm -E %fedora)
 
-sudo cat > /etc/yum.repos.d/virtualbox.repo <<EOF
+cat > /etc/yum.repos.d/virtualbox.repo <<EOF
 [virtualbox]
 name=Oracle VirtualBox
-baseurl=http://download.virtualbox.org/virtualbox/rpm/fedora/$FEDORA_VERSION/\$basearch/
+baseurl=http://download.virtualbox.org/virtualbox/\$releasever/fedora/\$basearch/
 enabled=1
 gpgcheck=1
 repo_gpgcheck=1
