@@ -8,7 +8,9 @@ COPY build_files /
 FROM ghcr.io/ublue-os/bazzite-nvidia:stable
 
 #FROM ghcr.io/ublue-os/bazzite:latest
-#FROM ghcr.io/ublue-os/aurora:latest
+
+FROM ghcr.io/ublue-os/bazzite-nvidia:stable
+
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest

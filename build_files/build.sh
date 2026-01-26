@@ -13,8 +13,8 @@ set -ouex pipefail
 dnf5 install -y tmux 
 
 dnf5  install -y mc tigervnc tigervnc-server \
-                terminator autossh fluxbox xterm \
-                rofi autossh btop fd fzf
+                autossh fluxbox xterm \
+                rofi fd fzf
 
 # Use a COPR Example:
 #
