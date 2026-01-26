@@ -13,14 +13,33 @@ set -ouex pipefail
 #dnf5 install -y tmux 
 #dnf5 update -y 
 
+dnf5 remove -y steam firewalld lutris bazaar \
+	steamdeck-kde-presets-desktop steam-devices
+
+
 dnf5  install -y mc tigervnc tigervnc-server \
                 autossh fluxbox xterm \
                 rofi fd fzf zoxide konsole \
 		krusader
 
-dnf5 remove -y steam firewalld lutris bazaar \
-	steamdeck-kde-presets-desktop steam-devices
+# for virtualbox
+dnfi5 install -y kernel-devel kernel-headers gcc make elfutils-libelf-devel
 
+FEDORA_VERSION=$(rpm -E %fedora)
+
+sudo cat > /etc/yum.repos.d/virtualbox.repo <<EOF
+[virtualbox]
+name=Oracle VirtualBox
+baseurl=http://download.virtualbox.org/virtualbox/rpm/fedora/$FEDORA_VERSION/\$basearch/
+enabled=1
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=https://www.virtualbox.org/download/oracle_vbox_2016.asc
+EOF
+
+rpm --import https://www.virtualbox.org/download/oracle_vbox_2016.asc
+
+dnf5 install -y VirtualBox
 
 #dnf5 install -y  plasma-workspace-x11
 
