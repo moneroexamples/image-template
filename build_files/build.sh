@@ -23,7 +23,7 @@ dnf5  install -y mc tigervnc tigervnc-server \
 		krusader
 
 # for virtualbox
-dnfi5 install -y kernel-devel kernel-headers gcc make elfutils-libelf-devel
+dnf5 install -y kernel-devel kernel-headers gcc make elfutils-libelf-devel
 
 FEDORA_VERSION=$(rpm -E %fedora)
 
