@@ -10,7 +10,8 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y tmux 
+#dnf5 install -y tmux 
+dnf5 update -y 
 
 dnf5  install -y mc tigervnc tigervnc-server \
                 autossh fluxbox xterm \
@@ -18,7 +19,7 @@ dnf5  install -y mc tigervnc tigervnc-server \
 
 dnf5 remove -y steam firewalld lutris bazaar
 
-dnf5 install -y @xfce-desktop-environment
+#dnf5 install -y @xfce-desktop-environment
 
 dnf5 install -y  plasma-workspace-x11
 
