@@ -23,6 +23,8 @@ dnf5  install -y mc tigervnc tigervnc-server \
                 rofi fd fzf zoxide konsole \
 		krusader xsane
 
+dnf --enablerepo=rpmfusion-free install -y VirtualBox
+
 # for virtualbox
 #dnf5 install -y kernel-devel kernel-headers gcc make elfutils-libelf-devel
 
